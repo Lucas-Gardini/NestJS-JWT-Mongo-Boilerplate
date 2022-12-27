@@ -25,6 +25,12 @@ export class UsersService {
 		return await this.userModel.findOne({ email });
 	}
 
+	async getRoles(userId: string) {
+		const user = await this.userModel.findById(userId).select("roles").exec();
+
+		return user.roles;
+	}
+
 	async createUser(user: IUser) {
 		const hashedPassword = await hash(user.password, Number(process.env.SALT_ROUNDS));
 

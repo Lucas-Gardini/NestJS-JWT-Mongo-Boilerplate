@@ -17,9 +17,9 @@ export class AuthService {
 
 		const result: any = { ...user };
 
+		// delete result._doc._id;
 		delete result._doc.password;
 		delete result._doc.__v;
-		delete result._doc._id;
 
 		return result._doc;
 	}

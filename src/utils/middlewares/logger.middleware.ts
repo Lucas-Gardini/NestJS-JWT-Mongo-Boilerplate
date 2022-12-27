@@ -1,13 +1,13 @@
 import { Injectable, NestMiddleware } from "@nestjs/common";
 import { Request, Response, NextFunction } from "express";
 import { DateTime } from "luxon";
-import * as jwt from "jsonwebtoken";
 import * as chalk from "chalk";
+import { IUser } from "src/@types/user";
 
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
 	use(req: Request, res: Response, next: NextFunction) {
-		const user = jwt.decode(req.headers.authorization?.split(" ")[1]);
+		const user: IUser = req.user as IUser;
 
 		let message = `${chalk.yellow("[REQUEST]")} ${DateTime.now().toLocaleString({ dateStyle: "short" }, { locale: "pt-BR" })} `;
 		if (user !== null && user !== undefined && typeof user === "object") {
