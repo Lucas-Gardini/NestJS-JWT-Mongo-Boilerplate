@@ -1,9 +1,4 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-
-## Descrição
+## Descrição <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="32" alt="Nest Logo" /></a>
 
 [NestJS](https://github.com/nestjs/nest) Boilerplate com autenticação JWT e conexão banco de dados MONGODB
 
@@ -13,7 +8,7 @@
 $ yarn install
 ```
 
-## Running the app
+## Rodando a aplicação
 
 ```bash
 # development
