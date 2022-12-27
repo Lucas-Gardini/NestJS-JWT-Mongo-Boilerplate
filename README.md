@@ -19,12 +19,35 @@ $ yarn start:dev
 
 # build
 $ yarn build:windows
-#ou
+# ou
 $ yarn build:linux
 
 # production mode
 $ yarn start:prod
 ```
+
+## Autenticação
+```bash
+POST /auth/login
+```
+
+Usuário padrão definido no arquivo .env, ele é criado automaticamente quando a aplicação é iniciada.
+```json
+{
+  "email": "master@nestjs.com",
+  "password": "default"
+}
+```
+
+## Testando a autenticação
+
+```bash
+GET /auth/info
+```
+Lembre-se de passar o token JWT no header (Authorization Bearer ...) da requisição.
+
+## Imporante!
+Lembre-se de alterar a secret key do JWT no arquivo .env, utilize uma chave segura e única.
 
 ## Suporte
 
