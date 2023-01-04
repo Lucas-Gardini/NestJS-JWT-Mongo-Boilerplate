@@ -1,6 +1,6 @@
 import { Controller, Delete, Get, Post, Put } from "@nestjs/common";
 import { Roles } from "../acl/roles.decorator";
-import { Role } from "../utils/enums/roles.enum";
+import { Role } from "../../utils/enums/roles.enum";
 
 @Controller("users")
 export class UsersController {

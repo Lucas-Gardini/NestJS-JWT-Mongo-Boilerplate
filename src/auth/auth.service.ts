@@ -1,6 +1,6 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { IUser } from "src/@types/user";
-import { UsersService } from "src/users/users.service";
+import { UsersService } from "~/src/auth/users/users.service";
 import { JwtService } from "@nestjs/jwt";
 import { compare } from "bcrypt";
 
