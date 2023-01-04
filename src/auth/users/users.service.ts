@@ -32,7 +32,7 @@ export class UsersService {
 	}
 
 	async createUser(user: IUser) {
-		const hashedPassword = await hash(user.password, Number(process.env.SALT_ROUNDS));
+		const hashedPassword = await this.hashPassword(user.password);
 
 		const createdUser = new this.userModel({
 			...user,
