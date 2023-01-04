@@ -18,9 +18,7 @@ $ yarn start
 $ yarn start:dev
 
 # build
-$ yarn build:windows
-# ou
-$ yarn build:linux
+$ yarn build
 
 # production mode
 $ yarn start:prod
